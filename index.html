@@ -301,8 +301,8 @@
                             <p>BDT <span id="totalPrice">0</span></p>
                         </div>
                         <div class="w-full lg:px-10 relative">
-                            <input type="text" class="w-full h-14 relative rounded-xl px-5" placeholder="Have any copuon?">
-                            <button class="btn bg-[#1DD100] absolute lg:right-12 right-3 mt-1 text-white">Apply</button>
+                            <input type="text" disabled class="w-full h-14 relative rounded-xl px-5" placeholder="Have any copuon?">
+                            <button disabled class="btn  bg-[#1DD100] absolute lg:right-12 right-3 mt-1 text-white">Apply</button>
                         </div>
                         <div class="flex justify-between lg:px-10 my-3">
                             <h1>Grand Total</h1>
@@ -314,11 +314,31 @@
                             <label class="font-2xl font-bold">Passenger Name*</label>
                             <input type="text" class="h-10 px-5 border rounded-xl" placeholder="Enter your name">
                             <label class="font-2xl font-bold">Phone Number*</label>
-                            <input type="number" class="h-10 px-5 border rounded-xl" placeholder="Enter your phone number">
+                            <input type="number" id="phoneNumber" class="h-10 px-5 border rounded-xl" placeholder="Enter your phone number">
                             <label class="font-2xl font-bold">Email ID*</label>
                             <input type="email" class="h-10 px-5 border rounded-xl" placeholder="Enter your email id">
-                            <button class="btn bg-[#1DD100] text-white font-bold">Next</button>
+                            <button disabled  id="nextBtn" class="btn bg-[#1DD100] text-white font-bold">Next</button>
                         </form>
+                        <!-- modal area start  -->
+                        <!-- You can open the modal using ID.showModal() method -->
+                            
+                            <dialog id="my_modal_3" class="modal">
+                                <div class="modal-box">
+                                    <form method="dialog">
+                                    </form>
+                                    <div class=" mx-auto">
+                                        <img class="mx-auto" src="./images/success.png" alt="">
+                                        <p class="text-center text-3xl text-green-600 my-3">SUCCESS</p>
+                                        <P class="text-center my-2 font-bold">Thank you for booking our bus seats.</P>
+                                        <p class="text-center my-2 font-bold">We are working hard to find the best service and deals for you.</p>
+                                        <p class="text-center">Shortly you will find a confirmation in our email</p>
+                                        <div class="flex justify-center my-5">
+                                            <button id="relodBtn" class="btn btn-success w-40 rounded-2xl text-white font-bold ">Continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </dialog>
+                        <!-- modal area end  -->
                         <div class="flex justify-between mt-5">
                             <a href="#" class="decoration-solid text-blue-700">Terms and Conditions</a>
                             <a href="#" class="decoration-solid text-blue-700">Cancellation Policy</a>

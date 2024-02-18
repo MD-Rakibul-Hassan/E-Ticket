@@ -28,12 +28,28 @@ const seatLeft = getId("seatLeft");
 // make left left seat count variable 
 let seatLeftCount = 40;
 // loop thrugh ticketBtns ;
-
+// get phone number input field 
+const phone = getId("phoneNumber");
+// get next button 
+const nextBtn = getId("nextBtn");
+// get modal id 
+const modal = getId("my_modal_3");
+// Show success modal when click next button ;
+nextBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    modal.showModal();
+});
+// reload webpage when click crosh in modal 
+const reloadPage = getId("relodBtn");
+reloadPage.addEventListener('click', function () {
+    window.location.reload()
+})
 for (btn of ticketBtns) {
     //  addEventListener every single button 
     btn.addEventListener ("click",ticketClick);   
 }
 function ticketClick (e) {
+    
     // Change bg color clicking the button 
     if (seatCount < 4) {
         // get seat count element 
@@ -54,6 +70,11 @@ function ticketClick (e) {
         <p>Ecommerch</p>
         <p>550</p>`;
         dynamicTicketDiscription.appendChild(div);
+        phone.addEventListener("keyup", function (e) {
+            if (e.target.value) {
+                nextBtn.removeAttribute("disabled");
+            }
+        })
     }
     e.target.setAttribute("disabled", "true");  
 }
