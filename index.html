@@ -37,7 +37,7 @@
                 <h3 class="text-2xl lg:text-5xl mt-2 font-bold text-[#1DD100]">E Paribahan</h3>
                 <p class="lg:mx-[400px] font-medium text-white text-center mt-5">Due to Special bdtickets & busbd Reserve service, Reserve bus ticket fare shall be higher than regular Eid fare Customers are requested purchase.</p>
                 <div class="mt-5">
-                    <button class="btn bg-[#1DD100] border-0">Bus Tickets</button>
+                    <a href="#EPoribhan" class="btn bg-[#1DD100] border-0 text-xl">Bye Ticket</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
             </div>
         </section>
         <!-- E-Poribahan section  -->
-        <section class="px-5 lg:pt-20 mt-10 lg:mt-20 lg:px-0 border-t-2 border-[#1DD100] rounded-t-2xl">
+        <section id="EPoribhan" class="px-5 lg:pt-20 mt-10 lg:mt-20 lg:px-0 border-t-2 border-[#1DD100] rounded-t-2xl">
             <div class="px-20">
                 <div class="text-center mt-5">
                     <h1 class="text-3xl font-semibold my-5">P.H Paribahan</h1>
@@ -288,19 +288,17 @@
                     <div class="bg-slate-200 px-10 py-5 rounded-xl">
                         <div class="mt-5">
                             <div class="my-3 flex justify-between border-b-4 border-dashed border-[#1DD100] py-3">
-                                <p class="">Seat <sup class="px-2 text-white ">2</sup></p>
+                                <p class="">Seat <sup class="px-2 bg-[#1DD100] text-white" id="seatList">0</sup></p>
                                 <p>Class</p>
                                 <p>Price</p>
                             </div>
                         </div>
-                        <div class="border-b-2 border-[#1DD100] flex justify-between py-3" id="dynamicTicketDiscription">
-                            <p>C2</p>
-                            <p>Economoy</p>
-                            <p>550</p>
+                        <div class="border-b-2 border-[#1DD100] flex flex-col justify-between py-3" id="dynamicTicketDiscription">
+                            
                         </div>
                         <div class="flex justify-between my-3">
                             <p>Total Price</p>
-                            <p>BDT <span id="totalPrice">1011</span></p>
+                            <p>BDT <span id="totalPrice">0</span></p>
                         </div>
                         <div class="w-full lg:px-10 relative">
                             <input type="text" class="w-full h-14 relative rounded-xl px-5" placeholder="Have any copuon?">
@@ -331,7 +329,7 @@
         </section>
     </main>
     <!-- Footer section  -->
-    <footer class="bg-[#030712] py-10">
+    <footer class="bg-[#030712] py-10 mt-10">
         <div class="flex flex-col lg:flex lg:flex-row lg:justify-between text-white container mx-auto px-5">
             <div class="text-white">
                 <h1 class="font-bold text-3xl">E-Ticket</h1>

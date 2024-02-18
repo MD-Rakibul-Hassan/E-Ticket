@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: Raleway;
 }
+html{
+    scroll-behavior: smooth;
+}
 .banner {
     background-image: url("../images/banner.png");
     min-height: 750px;
