@@ -30,15 +30,12 @@ let seatLeftCount = 40;
 // loop thrugh ticketBtns ;
 
 for (btn of ticketBtns) {
-    if (seatCount === 4) {
-        alert("flasjf")
-        break
-    }
     //  addEventListener every single button 
-    btn.addEventListener ("click",function (e) {
-        // Change bg color clicking the button 
-        e.target.style.backgroundColor = "#1DD100";
-        e.target.style.color = 'white';
+    btn.addEventListener ("click",ticketClick);   
+}
+function ticketClick (e) {
+    // Change bg color clicking the button 
+    if (seatCount < 4) {
         // get seat count element 
         seatCount += 1;
         seatElem.innerText = seatCount;
@@ -47,15 +44,16 @@ for (btn of ticketBtns) {
         // seatLeft count 
         seatLeftCount -= 1;
         seatLeft.innerText = seatLeftCount;
+        e.target.style.backgroundColor = "#1DD100";
+        e.target.style.color = 'white';
         // create and show ticiket names
         let div = makeElem("div");
         div.style.display = "flex";
         div.style.justifyContent = "space-between"
         div.innerHTML = `<p>${ e.target.innerText}</p>
         <p>Ecommerch</p>
-        <p>550</p>
-         `;
+        <p>550</p>`;
         dynamicTicketDiscription.appendChild(div);
-        e.target.setAttribute("disabled", "true")
-    })   
+    }
+    e.target.setAttribute("disabled", "true");  
 }
