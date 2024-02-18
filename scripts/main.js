@@ -21,10 +21,19 @@ let seatCount = 0;
 const totalPriceElement = getId("totalPrice");
 // make a variable for total ticket price 
 let totalPrice = 0;
-// dynamicTicketDiscription 
+//get dynamicTicketDiscription 
 let dynamicTicketDiscription = getId("dynamicTicketDiscription");
+// get left seat count element 
+const seatLeft = getId("seatLeft");
+// make left left seat count variable 
+let seatLeftCount = 40;
 // loop thrugh ticketBtns ;
+
 for (btn of ticketBtns) {
+    if (seatCount === 4) {
+        alert("flasjf")
+        break
+    }
     //  addEventListener every single button 
     btn.addEventListener ("click",function (e) {
         // Change bg color clicking the button 
@@ -35,7 +44,10 @@ for (btn of ticketBtns) {
         seatElem.innerText = seatCount;
         totalPrice += 550;
         totalPriceElement.innerText = totalPrice;
-        // create ul element 
+        // seatLeft count 
+        seatLeftCount -= 1;
+        seatLeft.innerText = seatLeftCount;
+        // create and show ticiket names
         let div = makeElem("div");
         div.style.display = "flex";
         div.style.justifyContent = "space-between"
@@ -44,7 +56,6 @@ for (btn of ticketBtns) {
         <p>550</p>
          `;
         dynamicTicketDiscription.appendChild(div);
-        
-    })
-    
+        e.target.setAttribute("disabled", "true")
+    })   
 }
